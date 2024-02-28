@@ -70,3 +70,4 @@ SimpleQuiz/[Aa]ssets/[Aa]ddressable[Aa]ssets[Dd]ata/*/*.bin*
 # Temporary auto-generated Android Assets
 SimpleQuiz/[Aa]ssets/[Ss]treamingAssets/aa.meta
 SimpleQuiz/[Aa]ssets/[Ss]treamingAssets/aa/*
+SimpleQuiz/Assets/StreamingAssets/ranking.json
