@@ -1,0 +1,36 @@
+[
+  {
+    "Question": "Jakiego koloru jest świnka Peppa?",
+    "Answers": [
+      {
+        "Answer": "Różowego",
+        "AnswerWeight": 1
+      },
+      {
+        "Answer": "Niebieskiego",
+        "AnswerWeight": -1
+      },
+      {
+        "Answer": "Nie wiem",
+        "AnswerWeight": 0
+      }
+    ]
+  },
+  {
+    "Question": "Czy do pytania o świnkę Peppe pospuścił mnie Mati?",
+    "Answers": [
+      {
+        "Answer": "Oczywiście",
+        "AnswerWeight": 1
+      },
+      {
+        "Answer": "Nie",
+        "AnswerWeight": -1
+      },
+      {
+        "Answer": "Nie wiem",
+        "AnswerWeight": 0
+      }
+    ]
+  }
+]
