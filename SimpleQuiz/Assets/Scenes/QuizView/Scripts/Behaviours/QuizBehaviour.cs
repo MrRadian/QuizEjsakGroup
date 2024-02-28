@@ -17,8 +17,14 @@ namespace Assets.Scenes.QuizView.Scripts.Behaviours
 
         private void Start()
         {
-            var file = File.ReadAllText(Path.Combine(Application.streamingAssetsPath, _fileName));
-            _questions = JsonConvert.DeserializeObject<List<QuizQuestion>>(file);
+            var filePath = Path.Combine(Application.streamingAssetsPath, _fileName);
+            if (!File.Exists(filePath))
+            {
+                Debug.Log($"Missing question file. Path to file {filePath}");
+                return;
+            }
+            var json = File.ReadAllText(filePath);
+            _questions = JsonConvert.DeserializeObject<List<QuizQuestion>>(json);
             LoadQuestions();
         }
 
