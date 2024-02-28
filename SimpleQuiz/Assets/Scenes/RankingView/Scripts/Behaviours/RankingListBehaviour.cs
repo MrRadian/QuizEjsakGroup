@@ -7,6 +7,7 @@ namespace Assets.Scenes.RankingView.Scripts.Behaviours
     public class RankingListBehaviour : MonoBehaviour
     {
         [SerializeField] private GameObject player;
+
         public void PopulateRankingList(List<QuizPlayer> players)
         {
             for (int i = 0; i < players.Count; i++)

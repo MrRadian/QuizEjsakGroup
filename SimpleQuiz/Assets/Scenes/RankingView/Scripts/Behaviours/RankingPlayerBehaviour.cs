@@ -11,8 +11,10 @@ namespace Assets.Scenes.RankingView.Scripts.Behaviours
 
         public string PlayerIndex
         { get { return playerIndex.text; } set { playerIndex.text = value; } }
+
         public string PlayerName
         { get { return playerName.text; } set { playerName.text = value; } }
+
         public string PlayerScore
         { get { return playerScore.text; } set { playerScore.text = value; } }
     }

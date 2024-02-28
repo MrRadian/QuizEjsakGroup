@@ -8,8 +8,10 @@ namespace Assets.Scenes.SplashView.Scripts.Behaviours
     public class PlayerBehaviour : MonoBehaviour
     {
         private static GameObject instance;
+
         [Min(2)]
         [SerializeField] private int nameLength = 5;
+
         private const string _chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
         private const string _startScene = "SplashView";
         public QuizPlayer QuizPlayer { get; private set; }

@@ -12,6 +12,7 @@ namespace Assets.Scenes.RankingView.Scripts.Behaviours
     {
         [Min(3)]
         [SerializeField] private int playerListLength = 3;
+
         [SerializeField] private RankingListBehaviour rankingList;
 
         private const string _rankingFile = "ranking.json";
@@ -22,7 +23,7 @@ namespace Assets.Scenes.RankingView.Scripts.Behaviours
             var rankingFile = Path.Combine(Application.streamingAssetsPath, _rankingFile);
             GetRankingList(rankingFile);
             var player = FindObjectOfType<PlayerBehaviour>();
-            if (player.PlayerPlayed)
+            if (player != null && player.PlayerPlayed)
             {
                 _quizRanking.Players.Add(player.QuizPlayer);
             }
@@ -39,7 +40,7 @@ namespace Assets.Scenes.RankingView.Scripts.Behaviours
 
         private void SortAndTrimPlayer()
         {
-            _quizRanking.Players = _quizRanking.Players.OrderBy(score => score.Score).Take(playerListLength).ToList();
+            _quizRanking.Players = _quizRanking.Players.OrderByDescending(score => score.Score).Take(playerListLength).ToList();
         }
 
         private void GetRankingList(string path)

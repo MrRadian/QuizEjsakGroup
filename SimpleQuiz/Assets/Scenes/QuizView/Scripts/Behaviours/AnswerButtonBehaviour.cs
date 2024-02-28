@@ -7,6 +7,7 @@ namespace Assets.Scenes.QuizView.Scripts.Behaviours
     public class AnswerButtonBehaviour : MonoBehaviour
     {
         [SerializeField] private TMP_Text answer;
+
         public string Answer
         {
             get { return answer.text; }

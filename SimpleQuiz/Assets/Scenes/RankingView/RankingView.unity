@@ -136,6 +136,8 @@ GameObject:
   - component: {fileID: 63138014}
   - component: {fileID: 63138013}
   - component: {fileID: 63138017}
+  - component: {fileID: 63138018}
+  - component: {fileID: 63138019}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -239,6 +241,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4c62f37d898da449861e8a5f8e8ed95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &63138018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 63138011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cfaf7f4c2edd2f4587056e7c6c1734e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerListLength: 3
+  rankingList: {fileID: 292876014}
+--- !u!114 &63138019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 63138011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67dc4953d374b17489fabb02a240140a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerInactivityTime: 120
 --- !u!1 &200596566
 GameObject:
   m_ObjectHideFlags: 0
