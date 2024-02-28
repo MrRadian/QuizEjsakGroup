@@ -625,8 +625,9 @@ GameObject:
   - component: {fileID: 292876013}
   - component: {fileID: 292876012}
   - component: {fileID: 292876011}
+  - component: {fileID: 292876014}
   m_Layer: 5
-  m_Name: PlayersList
+  m_Name: RankingList
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -666,8 +667,8 @@ MonoBehaviour:
   m_Padding:
     m_Left: 100
     m_Right: 100
-    m_Top: 0
-    m_Bottom: 0
+    m_Top: 50
+    m_Bottom: 50
   m_ChildAlignment: 1
   m_Spacing: 50
   m_ChildForceExpandWidth: 1
@@ -715,6 +716,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 292876009}
   m_CullTransparentMesh: 1
+--- !u!114 &292876014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 292876009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7581f731aa65c1145b8b46bbe79e9540, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 8442385260248214812, guid: bbade6321429065438e829697c614288, type: 3}
 --- !u!1 &352999979
 GameObject:
   m_ObjectHideFlags: 0

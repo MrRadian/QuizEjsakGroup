@@ -13,6 +13,7 @@ namespace Assets.Scenes.QuizView.Scripts.Behaviours
         {
             _playerBehaviour = FindAnyObjectByType<PlayerBehaviour>();
         }
+
         public void UpdateScore()
         {
             score.text = _playerBehaviour.QuizPlayer.Score.ToString();
