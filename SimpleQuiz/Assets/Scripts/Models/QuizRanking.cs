@@ -1,7 +1,9 @@
+using System.Collections.Generic;
+
 namespace Assets.Scripts.Models
 {
     public class QuizRanking
     {
-        public QuizPlayer[] Players { get; set; }
+        public List<QuizPlayer> Players { get; set; }
     }
 }

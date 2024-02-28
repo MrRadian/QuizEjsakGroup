@@ -3,22 +3,40 @@ using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Assets.Scenes.QuizView.Scripts.Behaviours
 {
     public class QuizBehaviour : MonoBehaviour
     {
-        [SerializeField] private AnswersHolderBehaviour answersHolder;
+        [SerializeField] private AnswersParentBehaviour answersParent;
         [SerializeField] private QuizQuestionBehaviour quizQuestion;
         private List<QuizQuestion> _questions;
+        private int _index;
         private const string _fileName = "questions.json";
 
         private void Start()
         {
             var file = File.ReadAllText(Path.Combine(Application.streamingAssetsPath, _fileName));
             _questions = JsonConvert.DeserializeObject<List<QuizQuestion>>(file);
-            answersHolder.LoadAnswers(_questions[0].Answers);
-            quizQuestion.Question = _questions[0].Question;
+            LoadQuestions();
+        }
+
+        public void LoadQuestions()
+        {
+            if (_index >= _questions.Count) //mo¿na dodaæ pobieranie z stosu, aby nie losowaæ dwukrotnie tego samego pytania
+            {
+                EndGame();
+                return;
+            }
+            answersParent.LoadAnswers(_questions[_index].Answers);
+            quizQuestion.Question = _questions[_index].Question;
+            _index++;
+        }
+
+        private void EndGame()
+        {
+            SceneManager.LoadScene("RankingView");
         }
     }
 }
