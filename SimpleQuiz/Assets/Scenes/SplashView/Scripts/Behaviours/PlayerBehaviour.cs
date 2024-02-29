@@ -1,5 +1,5 @@
+using Assets.Scenes.SplashView.Scripts.Managers;
 using Assets.Scripts.Models;
-using System.Text;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -12,9 +12,9 @@ namespace Assets.Scenes.SplashView.Scripts.Behaviours
         [Min(2)]
         [SerializeField] private int nameLength = 5;
 
-        private const string _chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-        private const string _startScene = "SplashView";
+        private PlayerNameManager _playerNameManager;
         public QuizPlayer QuizPlayer { get; private set; }
+        private const string _startScene = "SplashView";
         public bool PlayerPlayed { get; private set; }
 
         private void Awake()
@@ -28,36 +28,26 @@ namespace Assets.Scenes.SplashView.Scripts.Behaviours
             {
                 Destroy(gameObject);
             }
-
+            _playerNameManager = new PlayerNameManager();
             SceneManager.sceneLoaded += SceneManager_sceneLoaded;
         }
 
-        private void SceneManager_sceneLoaded(Scene arg0, LoadSceneMode arg1)
+        private void SceneManager_sceneLoaded(Scene scene, LoadSceneMode loadMode)
         {
-            if (arg0.name == _startScene)
+            if (scene.name == _startScene)
             {
                 CreateNewPlayer();
             }
         }
 
-        public void CreateNewPlayer()
+        private void CreateNewPlayer()
         {
             QuizPlayer = new QuizPlayer
             {
-                Name = RandomizeName(),
+                Name = _playerNameManager.RandomizeName(nameLength),
                 Score = 0
             };
             PlayerPlayed = false;
-        }
-
-        private string RandomizeName()
-        {
-            StringBuilder stringBuilder = new StringBuilder();
-            for (int i = 0; i < nameLength; i++)
-            {
-                stringBuilder.Append(_chars[Random.Range(0, _chars.Length)]);
-            }
-            return stringBuilder.ToString();
         }
 
         public void ChangeScore(int change)

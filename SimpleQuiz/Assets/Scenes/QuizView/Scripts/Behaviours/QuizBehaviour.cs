@@ -30,7 +30,7 @@ namespace Assets.Scenes.QuizView.Scripts.Behaviours
 
         public void LoadQuestions()
         {
-            if (_index >= _questions.Count) //mo¿na dodaæ pobieranie z stosu, aby nie losowaæ dwukrotnie tego samego pytania
+            if (_index >= _questions.Count)
             {
                 EndGame();
                 return;
