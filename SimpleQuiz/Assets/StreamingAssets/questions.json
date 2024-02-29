@@ -1,0 +1,87 @@
+[
+  {
+    "Question": "Jakiego koloru jest świnka Peppa?",
+    "Answers": [
+      {
+        "Answer": "Różowego",
+        "AnswerWeight": 1
+      },
+      {
+        "Answer": "Niebieskiego",
+        "AnswerWeight": -1
+      },
+      {
+        "Answer": "Nie wiem",
+        "AnswerWeight": 0
+      }
+    ]
+  },
+  {
+    "Question": "Jakie imię nosi młodszy brat Peppy?",
+    "Answers": [
+      {
+        "Answer": "George",
+        "AnswerWeight": 1
+      },
+      {
+        "Answer": "Richard",
+        "AnswerWeight": -1
+      },
+      {
+        "Answer": "Nie wiem",
+        "AnswerWeight": 0
+      }
+    ]
+  },
+  {
+    "Question": "Gdzie mieszka Peppa?",
+    "Answers": [
+      {
+        "Answer": "W domu na wzgórzu",
+        "AnswerWeight": 1
+      },
+      {
+        "Answer": "W lesie",
+        "AnswerWeight": -1
+      },
+      {
+        "Answer": "Nie wiem",
+        "AnswerWeight": 0
+      }
+    ]
+  },
+  {
+    "Question": "Kim jest najlepszy przyjaciel Peppy?",
+    "Answers": [
+      {
+        "Answer": "Freddy Królik",
+        "AnswerWeight": 1
+      },
+      {
+        "Answer": "Suzy Owieczka",
+        "AnswerWeight": -1
+      },
+      {
+        "Answer": "Nie wiem",
+        "AnswerWeight": 0
+      }
+    ]
+  },
+  {
+    "Question": "Czy do pytań o świnkę Peppe podpuścił mnie Mati?",
+    "Answers": [
+      {
+        "Answer": "Oczywiście",
+        "AnswerWeight": 1
+      },
+      {
+        "Answer": "Nie",
+        "AnswerWeight": -1
+      },
+      {
+        "Answer": "Nie wiem",
+        "AnswerWeight": 0
+      }
+    ]
+  }
+]
